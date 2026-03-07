@@ -86,7 +86,7 @@ export default function Skills() {
   const inView = useInView(ref, { once: true, margin: '-80px' });
 
   return (
-    <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0a0a14]">
+    <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-[#0a0a14]">
       <div className="max-w-6xl mx-auto" ref={ref}>
         {/* Heading */}
         <motion.div

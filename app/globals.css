@@ -3,9 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-  --background-start-rgb: 10, 10, 20;
-  --background-end-rgb: 10, 10, 20;
+  --bg: #f8fafc;
+  --fg: #0f172a;
+  --bg-elevated: #ffffff;
+  --bg-muted: #f1f5f9;
+  --border-soft: rgba(15, 23, 42, 0.12);
+  --scroll-track: #e2e8f0;
+  --scroll-thumb: #6366f1;
+}
+
+html.dark {
+  --bg: #0a0a14;
+  --fg: #e2e8f0;
+  --bg-elevated: rgba(255, 255, 255, 0.04);
+  --bg-muted: #0d0d1a;
+  --border-soft: rgba(255, 255, 255, 0.08);
+  --scroll-track: #0a0a14;
+  --scroll-thumb: #4f46e5;
 }
 
 html {
@@ -14,14 +28,8 @@ html {
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0a0a14;
-  color: #e2e8f0;
-}
-
-/* Dark mode is default; light mode overrides */
-.light body {
-  background-color: #f8fafc;
-  color: #0f172a;
+  background-color: var(--bg);
+  color: var(--fg);
 }
 
 /* Custom scrollbar */
@@ -30,11 +38,11 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #0a0a14;
+  background: var(--scroll-track);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #4f46e5;
+  background: var(--scroll-thumb);
   border-radius: 3px;
 }
 
@@ -52,9 +60,14 @@ body {
 
 /* Animated gradient background */
 .animated-gradient {
-  background: linear-gradient(-45deg, #0a0a14, #1e1b4b, #0c1a3a, #0a0a14);
+  background: linear-gradient(-45deg, #eef2ff, #dbeafe, #e0f2fe, #f8fafc);
   background-size: 400% 400%;
   animation: gradient 12s ease infinite;
+}
+
+html.dark .animated-gradient {
+  background: linear-gradient(-45deg, #0a0a14, #1e1b4b, #0c1a3a, #0a0a14);
+  background-size: 400% 400%;
 }
 
 @keyframes gradient {
@@ -74,12 +87,42 @@ body {
 
 /* Card glass effect */
 .glass-card {
-  background: rgba(255, 255, 255, 0.04);
+  background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(10px);
+  border: 1px solid var(--border-soft);
+}
+
+html.dark .glass-card {
+  background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.light .glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  border: 1px solid rgba(0, 0, 0, 0.08);
+/* Ensure common text utilities stay readable in light mode */
+html:not(.dark) .text-white {
+  color: #0f172a !important;
+}
+
+html:not(.dark) .text-slate-500 {
+  color: #475569 !important;
+}
+
+html:not(.dark) .text-slate-400 {
+  color: #334155 !important;
+}
+
+html:not(.dark) .text-slate-300 {
+  color: #1e293b !important;
+}
+
+html:not(.dark) .border-white\/5,
+html:not(.dark) .border-white\/10 {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+html:not(.dark) .bg-white\/5 {
+  background-color: rgba(15, 23, 42, 0.04) !important;
+}
+
+html:not(.dark) .hover\:text-white:hover {
+  color: #0f172a !important;
 }
