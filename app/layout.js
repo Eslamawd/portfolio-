@@ -1,26 +1,26 @@
-import './globals.css';
+import "./globals.css";
 
 export const metadata = {
-  title: 'Eslam Awd — Full-Stack Developer',
+  title: "Eslam Awd — Full-Stack Developer",
   description:
-    'Portfolio of Eslam, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.',
+    "Portfolio of Eslam, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.",
   keywords: [
-    'Eslam',
-    'Full-Stack Developer',
-    'React',
-    'Next.js',
-    'Laravel',
-    'Node.js',
-    'AI',
-    'ML',
-    'Portfolio',
+    "Eslam",
+    "Full-Stack Developer",
+    "React",
+    "Next.js",
+    "Laravel",
+    "Node.js",
+    "AI",
+    "ML",
+    "Portfolio",
   ],
-  authors: [{ name: 'Eslam' }],
+  authors: [{ name: "Eslam" }],
   openGraph: {
-    title: 'Eslam — Full-Stack Developer',
+    title: "Eslam — Full-Stack Developer",
     description:
-      'Portfolio of Eslam, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.',
-    type: 'website',
+      "Portfolio of Eslam, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.",
+    type: "website",
   },
 };
 
@@ -29,7 +29,11 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link
+          rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossOrigin="anonymous"
+        />
         <link
           href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
           rel="stylesheet"

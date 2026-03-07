@@ -1,26 +1,33 @@
-'use client';
+"use client";
 
-import { Github, Heart, Code2, Linkedin, BriefcaseBusiness, MessageCircle } from 'lucide-react';
+import {
+  Github,
+  Heart,
+  Code2,
+  Linkedin,
+  BriefcaseBusiness,
+  MessageCircle,
+} from "lucide-react";
 
 const quickLinks = [
   {
-    label: 'GitHub',
-    href: 'https://github.com/Eslamawd',
+    label: "GitHub",
+    href: "https://github.com/Eslamawd",
     icon: Github,
   },
   {
-    label: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/eslam-awd-9a7b42248/',
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/eslam-awd-9a7b42248/",
     icon: Linkedin,
   },
   {
-    label: 'Upwork',
-    href: 'https://www.upwork.com/freelancers/eslama128',
+    label: "Upwork",
+    href: "https://www.upwork.com/freelancers/eslama128",
     icon: BriefcaseBusiness,
   },
   {
-    label: 'WhatsApp',
-    href: 'https://wa.me/201110215455',
+    label: "WhatsApp",
+    href: "https://wa.me/201110215455",
     icon: MessageCircle,
   },
 ];
@@ -42,9 +49,9 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-slate-500 text-sm text-center">
-            &copy; {year} Eslam. All rights reserved. &nbsp;|&nbsp; Built with{' '}
-            <span className="text-indigo-400 font-medium">Next.js</span> &amp;{' '}
-            <span className="text-indigo-400 font-medium">TailwindCSS</span>{' '}
+            &copy; {year} Eslam. All rights reserved. &nbsp;|&nbsp; Built with{" "}
+            <span className="text-indigo-400 font-medium">Next.js</span> &amp;{" "}
+            <span className="text-indigo-400 font-medium">TailwindCSS</span>{" "}
             <Heart className="inline w-3.5 h-3.5 text-rose-500 fill-rose-500" />
           </p>
 
