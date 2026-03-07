@@ -4,6 +4,7 @@ export const metadata = {
   title: "Eslam Awd — Full-Stack Developer",
   description:
     "Portfolio of Eslam, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.",
+  metadataBase: new URL("https://eslamawd.vercel.app"),
   keywords: [
     "Eslam",
     "Full-Stack Developer",
@@ -21,6 +22,21 @@ export const metadata = {
     description:
       "Portfolio of Eslam, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.",
     type: "website",
+    images: [
+      {
+        url: "/profile.jpg",
+        width: 1200,
+        height: 1200,
+        alt: "Eslam Awd profile photo",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Eslam Awd — Full-Stack Developer",
+    description:
+      "Portfolio of Eslam, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.",
+    images: ["/profile.jpg"],
   },
 };
 
