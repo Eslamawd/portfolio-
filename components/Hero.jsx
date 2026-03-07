@@ -52,6 +52,8 @@ function useTypingEffect(words, speed = 80, pause = 1800) {
 
 export default function Hero() {
   const typed = useTypingEffect(TYPING_WORDS);
+  const [imageReady, setImageReady] = useState(true);
+  const profilePhotoSrc = '/profile.jpg';
 
   const scrollTo = (id) => {
     const el = document.querySelector(id);
@@ -80,6 +82,29 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        {/* Profile photo */}
+        <motion.div
+          initial={{ opacity: 0, y: 16, scale: 0.95 }}
+          animate={{ opacity: 1, y: 0, scale: 1 }}
+          transition={{ duration: 0.45 }}
+          className="mx-auto mb-6"
+        >
+          <div className="mx-auto w-28 h-28 sm:w-32 sm:h-32 rounded-full p-1 bg-gradient-to-br from-indigo-500 via-cyan-500 to-purple-600 shadow-xl shadow-indigo-500/30">
+            <div className="w-full h-full rounded-full overflow-hidden bg-slate-100 dark:bg-slate-900 flex items-center justify-center">
+              {imageReady ? (
+                <img
+                  src={profilePhotoSrc}
+                  alt="Eslam profile"
+                  className="w-full h-full object-cover"
+                  onError={() => setImageReady(false)}
+                />
+              ) : (
+                <span className="text-xl font-bold text-slate-700 dark:text-slate-200">EA</span>
+              )}
+            </div>
+          </div>
+        </motion.div>
+
         {/* Badge */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
