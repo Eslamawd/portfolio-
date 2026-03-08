@@ -1,19 +1,19 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
-import { ArrowDown, Github, ChevronRight } from 'lucide-react';
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import { ArrowDown, Github, ChevronRight } from "lucide-react";
 
 const TYPING_WORDS = [
-  'Full-Stack Developer',
-  'AI Enthusiast',
-  'React & Next.js Expert',
-  'Laravel Developer',
-  'Problem Solver',
+  "Full-Stack Developer",
+  "AI Enthusiast",
+  "React & Next.js Expert",
+  "Laravel Developer",
+  "Problem Solver",
 ];
 
 function useTypingEffect(words, speed = 80, pause = 1800) {
-  const [display, setDisplay] = useState('');
+  const [display, setDisplay] = useState("");
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [deleting, setDeleting] = useState(false);
@@ -53,11 +53,11 @@ function useTypingEffect(words, speed = 80, pause = 1800) {
 export default function Hero() {
   const typed = useTypingEffect(TYPING_WORDS);
   const [imageReady, setImageReady] = useState(true);
-  const profilePhotoSrc = '/profile.jpg';
+  const profilePhotoSrc = "/profile.jpg";
 
   const scrollTo = (id) => {
     const el = document.querySelector(id);
-    if (el) el.scrollIntoView({ behavior: 'smooth' });
+    if (el) el.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
@@ -70,8 +70,8 @@ export default function Hero() {
         className="absolute inset-0 opacity-20"
         style={{
           backgroundImage:
-            'linear-gradient(rgba(99,102,241,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.15) 1px, transparent 1px)',
-          backgroundSize: '60px 60px',
+            "linear-gradient(rgba(99,102,241,0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.15) 1px, transparent 1px)",
+          backgroundSize: "60px 60px",
         }}
       />
 
@@ -99,7 +99,9 @@ export default function Hero() {
                   onError={() => setImageReady(false)}
                 />
               ) : (
-                <span className="text-xl font-bold text-slate-700 dark:text-slate-200">EA</span>
+                <span className="text-xl font-bold text-slate-700 dark:text-slate-200">
+                  EA
+                </span>
               )}
             </div>
           </div>
@@ -123,9 +125,10 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight"
         >
-          Hi, I&apos;m{' '}
-          <span className="gradient-text">Eslam</span>{' '}
-          <span className="inline-block animate-[float_3s_ease-in-out_infinite]">👋</span>
+          Hi, I&apos;m <span className="gradient-text">Eslam</span>{" "}
+          <span className="inline-block animate-[float_3s_ease-in-out_infinite]">
+            👋
+          </span>
         </motion.h1>
 
         {/* Typing effect */}
@@ -136,7 +139,9 @@ export default function Hero() {
           className="text-2xl sm:text-3xl font-semibold text-indigo-400 mb-6 h-10"
         >
           {typed}
-          <span className="border-r-2 border-indigo-400 ml-0.5 animate-pulse">&nbsp;</span>
+          <span className="border-r-2 border-indigo-400 ml-0.5 animate-pulse">
+            &nbsp;
+          </span>
         </motion.div>
 
         {/* Subtitle */}
@@ -146,10 +151,13 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Passionate full-stack developer with expertise in{' '}
-          <span className="text-indigo-400 font-medium">React, Next.js, Laravel,</span> and{' '}
-          <span className="text-purple-400 font-medium">Node.js</span>. I build modern web
-          applications and AI-powered systems that solve real-world problems.
+          Passionate full-stack developer with expertise in{" "}
+          <span className="text-indigo-400 font-medium">
+            React, Next.js, Laravel,
+          </span>{" "}
+          and <span className="text-purple-400 font-medium">Node.js</span>. I
+          build modern web applications and AI-powered systems that solve
+          real-world problems.
         </motion.p>
 
         {/* CTA buttons */}
@@ -160,14 +168,14 @@ export default function Hero() {
           className="flex flex-col sm:flex-row gap-4 justify-center mb-12"
         >
           <button
-            onClick={() => scrollTo('#projects')}
+            onClick={() => scrollTo("#projects")}
             className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-lg hover:shadow-lg hover:shadow-indigo-500/30 hover:scale-105 transition-all duration-200"
           >
             View Projects
             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           <button
-            onClick={() => scrollTo('#contact')}
+            onClick={() => scrollTo("#contact")}
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/10 text-white font-semibold text-lg hover:bg-white/5 hover:border-indigo-500/50 hover:scale-105 transition-all duration-200"
           >
             Contact Me

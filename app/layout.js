@@ -1,12 +1,12 @@
 import "./globals.css";
 
 export const metadata = {
-  title: "Eslam Awd — Full-Stack Developer",
+  title: "Eslam Awod — Full-Stack Developer",
   description:
-    "Portfolio of Eslam, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.",
+    "Portfolio of Eslam Awod, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.",
   metadataBase: new URL("https://eslamawd.vercel.app"),
   keywords: [
-    "Eslam",
+    "Eslam Awod",
     "Full-Stack Developer",
     "React",
     "Next.js",
@@ -16,26 +16,26 @@ export const metadata = {
     "ML",
     "Portfolio",
   ],
-  authors: [{ name: "Eslam" }],
+  authors: [{ name: "Eslam Awod" }],
   openGraph: {
-    title: "Eslam — Full-Stack Developer",
+    title: "Eslam Awod — Full-Stack Developer",
     description:
-      "Portfolio of Eslam, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.",
+      "Portfolio of Eslam Awod, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.",
     type: "website",
     images: [
       {
         url: "/profile.jpg",
         width: 1200,
         height: 1200,
-        alt: "Eslam Awd profile photo",
+        alt: "Eslam Awod profile photo",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Eslam Awd — Full-Stack Developer",
+    title: "Eslam Awod — Full-Stack Developer",
     description:
-      "Portfolio of Eslam, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.",
+      "Portfolio of Eslam Awod, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.",
     images: ["/profile.jpg"],
   },
 };

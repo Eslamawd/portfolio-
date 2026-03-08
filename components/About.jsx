@@ -80,7 +80,7 @@ export default function About() {
             <div className="glass-card rounded-2xl p-8 space-y-5">
               <p className="text-slate-300 text-lg leading-relaxed">
                 Hey there! I&apos;m{" "}
-                <span className="text-white font-semibold">Eslam</span>, a
+                <span className="text-white font-semibold">Eslam Awod</span>, a
                 passionate full-stack developer who loves turning complex
                 problems into elegant digital solutions. I specialize in
                 building scalable web applications and AI-powered systems that
