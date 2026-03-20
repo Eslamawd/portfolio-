@@ -16,6 +16,7 @@ const categories = [
       "Radix UI",
       "Framer Motion",
       "JavaScript",
+      "TypeScript",
       "HTML5",
       "CSS3",
     ],
@@ -24,7 +25,7 @@ const categories = [
     title: "Backend",
     icon: Server,
     color: "purple",
-    skills: ["Laravel", "Node.js", "PHP", "REST APIs", "Laravel Sanctum"],
+    skills: ["Laravel", "Node.js", "PHP", "REST APIs", "Laravel Sanctum", "Redis", "REST API Design"],
   },
   {
     title: "Database & Tools",
@@ -115,6 +116,14 @@ export default function Skills() {
             Skills &amp; <span className="gradient-text">Tools</span>
           </h2>
           <div className="mt-4 w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
+          <p className="mt-6 text-slate-400 max-w-2xl mx-auto text-center text-sm leading-relaxed">
+            2+ years of hands-on production experience across the full stack —
+            from{" "}
+            <span className="text-indigo-400"> Laravel APIs</span> and{" "}
+            <span className="text-purple-400"> Next.js frontends</span> to{" "}
+            <span className="text-cyan-400"> MySQL databases</span> and{" "}
+            <span className="text-emerald-400"> AI/ML systems</span>.
+          </p>
         </motion.div>
 
         {/* Grid */}
