@@ -8,6 +8,7 @@ import {
   BriefcaseBusiness,
   MessageCircle,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const quickLinks = [
   {
@@ -33,6 +34,7 @@ const quickLinks = [
 ];
 
 export default function Footer() {
+  const t = useTranslations("footer");
   const year = new Date().getFullYear();
 
   return (
@@ -49,7 +51,7 @@ export default function Footer() {
 
           {/* Copyright */}
           <p className="text-slate-500 text-sm text-center">
-            &copy; {year} Eslam. All rights reserved. &nbsp;|&nbsp; Built with{" "}
+            &copy; {year} Eslam. {t("rights")} &nbsp;|&nbsp; {t("builtWith")}{" "}
             <span className="text-indigo-400 font-medium">Next.js</span> &amp;{" "}
             <span className="text-indigo-400 font-medium">TailwindCSS</span>{" "}
             <Heart className="inline w-3.5 h-3.5 text-rose-500 fill-rose-500" />

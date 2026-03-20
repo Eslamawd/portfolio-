@@ -41,35 +41,5 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-          rel="stylesheet"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `(() => {
-              try {
-                const stored = localStorage.getItem('theme');
-                const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-                const isDark = stored ? stored === 'dark' : prefersDark;
-                document.documentElement.classList.toggle('dark', isDark);
-              } catch (_) {
-                document.documentElement.classList.add('dark');
-              }
-            })();`,
-          }}
-        />
-      </head>
-      <body className="antialiased">{children}</body>
-    </html>
-  );
+  return children;
 }

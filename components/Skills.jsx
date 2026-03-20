@@ -3,10 +3,11 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Monitor, Server, Database, Cpu } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const categories = [
+const skillsByCategory = [
   {
-    title: "Frontend",
+    key: "frontend",
     icon: Monitor,
     color: "indigo",
     skills: [
@@ -22,13 +23,13 @@ const categories = [
     ],
   },
   {
-    title: "Backend",
+    key: "backend",
     icon: Server,
     color: "purple",
     skills: ["Laravel", "Node.js", "PHP", "REST APIs", "Laravel Sanctum", "Redis", "REST API Design"],
   },
   {
-    title: "Database & Tools",
+    key: "database",
     icon: Database,
     color: "cyan",
     skills: [
@@ -43,7 +44,7 @@ const categories = [
     ],
   },
   {
-    title: "Special",
+    key: "special",
     icon: Cpu,
     color: "emerald",
     skills: [
@@ -92,6 +93,7 @@ const fadeUp = {
 };
 
 export default function Skills() {
+  const t = useTranslations("skills");
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -110,30 +112,25 @@ export default function Skills() {
           className="text-center mb-16"
         >
           <span className="text-indigo-400 font-semibold text-sm tracking-widest uppercase">
-            Tech Stack
+            {t("sectionLabel")}
           </span>
           <h2 className="mt-2 text-4xl sm:text-5xl font-black text-white">
-            Skills &amp; <span className="gradient-text">Tools</span>
+            {t("title")} <span className="gradient-text">{t("titleHighlight")}</span>
           </h2>
           <div className="mt-4 w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
           <p className="mt-6 text-slate-400 max-w-2xl mx-auto text-center text-sm leading-relaxed">
-            2+ years of hands-on production experience across the full stack —
-            from{" "}
-            <span className="text-indigo-400"> Laravel APIs</span> and{" "}
-            <span className="text-purple-400"> Next.js frontends</span> to{" "}
-            <span className="text-cyan-400"> MySQL databases</span> and{" "}
-            <span className="text-emerald-400"> AI/ML systems</span>.
+            {t("tagline")}
           </p>
         </motion.div>
 
         {/* Grid */}
         <div className="grid sm:grid-cols-2 gap-6">
-          {categories.map((cat, i) => {
+          {skillsByCategory.map((cat, i) => {
             const colors = colorMap[cat.color];
             const Icon = cat.icon;
             return (
               <motion.div
-                key={cat.title}
+                key={cat.key}
                 variants={fadeUp}
                 initial="hidden"
                 animate={inView ? "visible" : "hidden"}
@@ -147,7 +144,7 @@ export default function Skills() {
                   <div className={`${colors.iconBg} rounded-lg p-2`}>
                     <Icon className={`w-5 h-5 ${colors.iconColor}`} />
                   </div>
-                  <h3 className="text-white font-bold text-lg">{cat.title}</h3>
+                  <h3 className="text-white font-bold text-lg">{t(`categories.${cat.key}`)}</h3>
                 </div>
 
                 {/* Tags */}

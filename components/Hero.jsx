@@ -3,14 +3,7 @@
 import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { ArrowDown, Github, ChevronRight } from "lucide-react";
-
-const TYPING_WORDS = [
-  "Full-Stack Developer",
-  "AI Enthusiast",
-  "React & Next.js Expert",
-  "Laravel Developer",
-  "Problem Solver",
-];
+import { useTranslations } from "next-intl";
 
 function useTypingEffect(words, speed = 80, pause = 1800) {
   const [display, setDisplay] = useState("");
@@ -51,7 +44,9 @@ function useTypingEffect(words, speed = 80, pause = 1800) {
 }
 
 export default function Hero() {
-  const typed = useTypingEffect(TYPING_WORDS);
+  const t = useTranslations("hero");
+  const typingWords = t.raw("typingWords");
+  const typed = useTypingEffect(typingWords);
   const [imageReady, setImageReady] = useState(true);
   const profilePhotoSrc = "/profile.jpg";
 
@@ -115,7 +110,7 @@ export default function Hero() {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-400 text-sm font-medium mb-8"
         >
           <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-          Open to opportunities
+          {t("badge")}
         </motion.div>
 
         {/* Greeting */}
@@ -125,7 +120,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.1 }}
           className="text-5xl sm:text-6xl lg:text-7xl font-black text-white mb-4 leading-tight"
         >
-          Hi, I&apos;m <span className="gradient-text">Eslam</span>{" "}
+          {t("greeting")} <span className="gradient-text">Eslam</span>{" "}
           <span className="inline-block animate-[float_3s_ease-in-out_infinite]">
             👋
           </span>
@@ -151,11 +146,7 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Full-Stack Developer with 2+ years shipping production apps — from AI
-          trading bots to restaurant POS systems. I specialize in{" "}
-          <span className="text-indigo-400 font-medium">React, Next.js</span>{" "}
-          &amp;{" "}
-          <span className="text-purple-400 font-medium">Laravel</span>.
+          {t("subtitle")}
         </motion.p>
 
         {/* CTA buttons */}
@@ -169,21 +160,21 @@ export default function Hero() {
             onClick={() => scrollTo("#projects")}
             className="group inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold text-lg hover:shadow-lg hover:shadow-indigo-500/30 hover:scale-105 transition-all duration-200"
           >
-            View Projects
+            {t("viewProjects")}
             <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </button>
           <button
             onClick={() => scrollTo("#contact")}
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/10 text-white font-semibold text-lg hover:bg-white/5 hover:border-indigo-500/50 hover:scale-105 transition-all duration-200"
           >
-            Contact Me
+            {t("contactMe")}
           </button>
           <a
             href="/cv.pdf"
             download
             className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/10 text-white font-semibold text-lg hover:bg-white/5 hover:border-purple-500/50 hover:scale-105 transition-all duration-200"
           >
-            Download CV
+            {t("downloadCv")}
           </a>
         </motion.div>
 

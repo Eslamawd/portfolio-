@@ -9,6 +9,7 @@ import {
   BriefcaseBusiness,
   MessageCircle,
 } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 40 },
@@ -54,6 +55,7 @@ const socialLinks = [
 ];
 
 export default function Contact() {
+  const t = useTranslations("contact");
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -72,16 +74,14 @@ export default function Contact() {
           className="text-center mb-16"
         >
           <span className="text-indigo-400 font-semibold text-sm tracking-widest uppercase">
-            Get in Touch
+            {t("sectionLabel")}
           </span>
           <h2 className="mt-2 text-4xl sm:text-5xl font-black text-white">
-            Let&apos;s Work <span className="gradient-text">Together</span>
+            {t("title")} <span className="gradient-text">{t("titleHighlight")}</span>
           </h2>
           <div className="mt-4 w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
           <p className="mt-6 text-slate-400 max-w-xl mx-auto">
-            Have a project in mind or want to collaborate? I&apos;d love to hear
-            from you. Send me a message and let&apos;s create something amazing
-            together.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -95,9 +95,9 @@ export default function Contact() {
             className="space-y-6"
           >
             <div className="glass-card rounded-2xl border border-white/5 p-8">
-              <h3 className="text-white font-bold text-xl mb-2">Find me on</h3>
+              <h3 className="text-white font-bold text-xl mb-2">{t("findMe")}</h3>
               <p className="text-slate-400 text-sm mb-6">
-                Check out my work, projects, and contributions.
+                {t("findMeDesc")}
               </p>
 
               <div className="space-y-3">
@@ -129,16 +129,14 @@ export default function Contact() {
             {/* Info card */}
             <div className="glass-card rounded-2xl border border-indigo-500/20 p-8 bg-gradient-to-br from-indigo-500/5 to-purple-500/5">
               <h3 className="text-white font-bold text-xl mb-3">
-                Let&apos;s Build Something
+                {t("letsBuild")}
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Whether you need a full-stack web app, a Laravel API, or an
-                AI-powered system — I have shipped production projects in all of
-                these. Let&apos;s talk about your next build.
+                {t("letsBuildDesc")}
               </p>
               <div className="mt-5 flex items-center gap-2 text-indigo-400 text-sm font-medium">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                🟢 Actively seeking Full-Stack roles (Laravel / Next.js) — Available immediately
+                🟢 {t("available")}
               </div>
             </div>
           </motion.div>

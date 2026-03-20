@@ -3,6 +3,7 @@
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { Github, ExternalLink } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 const projects = [
   {
@@ -163,6 +164,7 @@ const fadeUp = {
 };
 
 export default function Projects() {
+  const t = useTranslations("projects");
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -181,15 +183,14 @@ export default function Projects() {
           className="text-center mb-16"
         >
           <span className="text-indigo-400 font-semibold text-sm tracking-widest uppercase">
-            Portfolio
+            {t("sectionLabel")}
           </span>
           <h2 className="mt-2 text-4xl sm:text-5xl font-black text-white">
-            Featured <span className="gradient-text">Projects</span>
+            {t("title")} <span className="gradient-text">{t("titleHighlight")}</span>
           </h2>
           <div className="mt-4 w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
           <p className="mt-6 text-slate-400 max-w-xl mx-auto">
-            A selection of projects I&apos;ve built — from AI-powered trading
-            bots to full-stack restaurant management systems.
+            {t("subtitle")}
           </p>
         </motion.div>
 
@@ -222,15 +223,15 @@ export default function Projects() {
                 {/* Case Study */}
                 <div className={`mb-4 rounded-xl border p-3 space-y-1.5 bg-white/5 ${accent.border}`}>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    <span className="font-semibold text-red-400">🔴 Challenge:</span>{" "}
+                    <span className="font-semibold text-red-400">🔴 {t("challenge")}:</span>{" "}
                     {project.challenge}
                   </p>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    <span className="font-semibold text-green-400">🟢 Solution:</span>{" "}
+                    <span className="font-semibold text-green-400">🟢 {t("solution")}:</span>{" "}
                     {project.solution}
                   </p>
                   <p className="text-xs text-slate-400 leading-relaxed">
-                    <span className="font-semibold text-yellow-400">🏆 Result:</span>{" "}
+                    <span className="font-semibold text-yellow-400">🏆 {t("result")}:</span>{" "}
                     {project.result}
                   </p>
                 </div>
@@ -289,7 +290,7 @@ export default function Projects() {
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/10 text-slate-300 hover:text-white hover:border-indigo-500/50 hover:bg-white/5 transition-all duration-200 text-sm font-medium"
           >
             <Github className="w-4 h-4" />
-            View all on GitHub
+            {t("viewAll")}
             <ExternalLink className="w-3.5 h-3.5 opacity-60" />
           </a>
         </motion.div>
