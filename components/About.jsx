@@ -80,30 +80,54 @@ export default function About() {
             <div className="glass-card rounded-2xl p-8 space-y-5">
               <p className="text-slate-300 text-lg leading-relaxed">
                 Hey there! I&apos;m{" "}
-                <span className="text-white font-semibold">Eslam Awod</span>, a
-                passionate full-stack developer who loves turning complex
-                problems into elegant digital solutions. I specialize in
-                building scalable web applications and AI-powered systems that
-                deliver real value.
+                <span className="text-white font-semibold">Eslam Awod</span> —
+                a Full-Stack Developer with{" "}
+                <span className="text-indigo-400 font-semibold">2+ years</span>{" "}
+                building production-ready web applications and AI-powered
+                systems. I&apos;ve shipped{" "}
+                <span className="text-purple-400 font-semibold">
+                  6+ real projects
+                </span>{" "}
+                from scratch, ranging from restaurant POS systems to
+                algorithmic crypto trading bots.
               </p>
               <p className="text-slate-400 leading-relaxed">
-                My journey spans across the entire stack — from crafting
-                pixel-perfect UIs with{" "}
-                <span className="text-indigo-400">React</span> and{" "}
-                <span className="text-indigo-400">Next.js</span>, to
-                architecting robust backends with{" "}
-                <span className="text-purple-400">Laravel</span> and{" "}
-                <span className="text-purple-400">Node.js</span>. I thrive at
-                the intersection of software engineering and artificial
-                intelligence.
+                My stack covers the full spectrum: pixel-perfect UIs with{" "}
+                <span className="text-indigo-400">React 19</span> and{" "}
+                <span className="text-indigo-400">Next.js</span>, robust REST
+                APIs with{" "}
+                <span className="text-purple-400">Laravel &amp; Sanctum</span>,
+                and real-time backend services with{" "}
+                <span className="text-purple-400">Node.js</span>. I&apos;ve
+                handled Clover POS integrations, QR-based ordering systems,
+                multi-role RBAC platforms, and AI/ML trading algorithms.
               </p>
               <p className="text-slate-400 leading-relaxed">
-                When I&apos;m not coding, I&apos;m exploring the latest in
-                AI/ML, contributing to open-source projects, or experimenting
-                with algorithmic trading strategies. I believe great software is
-                built with both technical excellence and a deep understanding of
-                user needs.
+                I thrive on turning complex technical challenges into clean,
+                maintainable solutions. Whether it&apos;s a startup MVP or a
+                scaling production system — I bring both technical depth and
+                product thinking to every project.
               </p>
+            </div>
+
+            {/* Experience Stats */}
+            <div className="glass-card rounded-2xl p-6">
+              <div className="grid grid-cols-2 gap-4">
+                {[
+                  { value: "6+", label: "Projects Shipped", color: "border-indigo-500/40" },
+                  { value: "2+", label: "Years Experience", color: "border-purple-500/40" },
+                  { value: "4", label: "Tech Stacks Mastered", color: "border-cyan-500/40" },
+                  { value: "∞", label: "Problems Solved", color: "border-emerald-500/40" },
+                ].map((stat) => (
+                  <div
+                    key={stat.label}
+                    className={`rounded-xl border ${stat.color} bg-white/5 p-4 text-center`}
+                  >
+                    <p className="text-3xl font-black text-white">{stat.value}</p>
+                    <p className="mt-1 text-xs text-slate-400">{stat.label}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </motion.div>
 

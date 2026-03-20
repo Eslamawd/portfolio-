@@ -151,13 +151,11 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="text-lg sm:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed"
         >
-          Passionate full-stack developer with expertise in{" "}
-          <span className="text-indigo-400 font-medium">
-            React, Next.js, Laravel,
-          </span>{" "}
-          and <span className="text-purple-400 font-medium">Node.js</span>. I
-          build modern web applications and AI-powered systems that solve
-          real-world problems.
+          Full-Stack Developer with 2+ years shipping production apps — from AI
+          trading bots to restaurant POS systems. I specialize in{" "}
+          <span className="text-indigo-400 font-medium">React, Next.js</span>{" "}
+          &amp;{" "}
+          <span className="text-purple-400 font-medium">Laravel</span>.
         </motion.p>
 
         {/* CTA buttons */}
@@ -180,6 +178,13 @@ export default function Hero() {
           >
             Contact Me
           </button>
+          <a
+            href="/cv.pdf"
+            download
+            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/10 text-white font-semibold text-lg hover:bg-white/5 hover:border-purple-500/50 hover:scale-105 transition-all duration-200"
+          >
+            Download CV
+          </a>
         </motion.div>
 
         {/* GitHub link */}

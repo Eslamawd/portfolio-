@@ -132,13 +132,13 @@ export default function Contact() {
                 Let&apos;s Build Something
               </h3>
               <p className="text-slate-400 text-sm leading-relaxed">
-                Whether you have a startup idea, need a full-stack web app, or
-                want to integrate AI into your product — I&apos;m ready to help
-                bring your vision to life.
+                Whether you need a full-stack web app, a Laravel API, or an
+                AI-powered system — I have shipped production projects in all of
+                these. Let&apos;s talk about your next build.
               </p>
               <div className="mt-5 flex items-center gap-2 text-indigo-400 text-sm font-medium">
                 <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                Available for freelance & full-time roles
+                🟢 Actively seeking Full-Stack roles (Laravel / Next.js) — Available immediately
               </div>
             </div>
           </motion.div>
