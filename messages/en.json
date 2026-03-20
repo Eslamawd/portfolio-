@@ -1,0 +1,75 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "Open to opportunities",
+    "greeting": "Hi, I'm",
+    "subtitle": "Full-Stack Developer with 2+ years shipping production apps — from AI trading bots to restaurant POS systems. I specialize in React, Next.js & Laravel.",
+    "viewProjects": "View Projects",
+    "contactMe": "Contact Me",
+    "downloadCv": "Download CV",
+    "typingWords": ["Full-Stack Developer", "AI Enthusiast", "React & Next.js Expert", "Laravel Developer", "Problem Solver"]
+  },
+  "about": {
+    "sectionLabel": "About Me",
+    "title": "Who I",
+    "titleHighlight": "Am",
+    "bio1": "Hey there! I'm Eslam Awod — a Full-Stack Developer with 2+ years building production-ready web applications and AI-powered systems. I've shipped 6+ real projects from scratch, ranging from restaurant POS systems to algorithmic crypto trading bots.",
+    "bio2": "My stack covers the full spectrum: pixel-perfect UIs with React 19 and Next.js, robust REST APIs with Laravel & Sanctum, and real-time backend services with Node.js. I've handled Clover POS integrations, QR-based ordering systems, multi-role RBAC platforms, and AI/ML trading algorithms.",
+    "bio3": "I thrive on turning complex technical challenges into clean, maintainable solutions. Whether it's a startup MVP or a scaling production system — I bring both technical depth and product thinking to every project.",
+    "highlights": [
+      "Building AI-powered trading systems & restaurant management platforms",
+      "Full-Stack Developer with React, Next.js, Laravel, Node.js",
+      "AI/ML enthusiast creating intelligent automation systems",
+      "Experienced with POS integrations (Clover), QR systems, and real-time apps"
+    ],
+    "stats": {
+      "projects": "Projects Shipped",
+      "years": "Years Experience",
+      "stacks": "Tech Stacks Mastered",
+      "problems": "Problems Solved"
+    }
+  },
+  "skills": {
+    "sectionLabel": "Tech Stack",
+    "title": "Skills &",
+    "titleHighlight": "Tools",
+    "tagline": "2+ years of hands-on production experience across the full stack — from Laravel APIs and Next.js frontends to MySQL databases and AI/ML systems.",
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "database": "Database & Tools",
+      "special": "Special"
+    }
+  },
+  "projects": {
+    "sectionLabel": "Portfolio",
+    "title": "Featured",
+    "titleHighlight": "Projects",
+    "subtitle": "A selection of projects I've built — from AI-powered trading bots to full-stack restaurant management systems.",
+    "viewAll": "View all on GitHub",
+    "challenge": "Challenge",
+    "solution": "Solution",
+    "result": "Result"
+  },
+  "contact": {
+    "sectionLabel": "Get in Touch",
+    "title": "Let's Work",
+    "titleHighlight": "Together",
+    "subtitle": "Have a project in mind or want to collaborate? I'd love to hear from you.",
+    "findMe": "Find me on",
+    "findMeDesc": "Check out my work, projects, and contributions.",
+    "letsBuild": "Let's Build Something",
+    "letsBuildDesc": "Whether you need a full-stack web app, a Laravel API, or an AI-powered system — I have shipped production projects in all of these. Let's talk about your next build.",
+    "available": "Actively seeking Full-Stack roles (Laravel / Next.js) — Available immediately"
+  },
+  "footer": {
+    "rights": "All rights reserved.",
+    "builtWith": "Built with"
+  }
+}

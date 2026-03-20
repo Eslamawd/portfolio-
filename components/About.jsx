@@ -4,36 +4,13 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { Telescope, Briefcase, Bot, Globe } from "lucide-react";
+import { useTranslations } from "next-intl";
 
-const highlights = [
-  {
-    icon: Telescope,
-    color: "text-indigo-400",
-    bg: "bg-indigo-500/10",
-    border: "border-indigo-500/20",
-    text: "Building AI-powered trading systems & restaurant management platforms",
-  },
-  {
-    icon: Briefcase,
-    color: "text-purple-400",
-    bg: "bg-purple-500/10",
-    border: "border-purple-500/20",
-    text: "Full-Stack Developer with React, Next.js, Laravel, Node.js",
-  },
-  {
-    icon: Bot,
-    color: "text-cyan-400",
-    bg: "bg-cyan-500/10",
-    border: "border-cyan-500/20",
-    text: "AI/ML enthusiast creating intelligent automation systems",
-  },
-  {
-    icon: Globe,
-    color: "text-emerald-400",
-    bg: "bg-emerald-500/10",
-    border: "border-emerald-500/20",
-    text: "Experienced with POS integrations (Clover), QR systems, and real-time apps",
-  },
+const highlightIcons = [
+  { icon: Telescope, color: "text-indigo-400", bg: "bg-indigo-500/10", border: "border-indigo-500/20" },
+  { icon: Briefcase, color: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20" },
+  { icon: Bot, color: "text-cyan-400", bg: "bg-cyan-500/10", border: "border-cyan-500/20" },
+  { icon: Globe, color: "text-emerald-400", bg: "bg-emerald-500/10", border: "border-emerald-500/20" },
 ];
 
 const fadeUp = {
@@ -42,6 +19,8 @@ const fadeUp = {
 };
 
 export default function About() {
+  const t = useTranslations("about");
+  const highlights = t.raw("highlights");
   const ref = useRef(null);
   const inView = useInView(ref, { once: true, margin: "-80px" });
 
@@ -60,10 +39,10 @@ export default function About() {
           className="text-center mb-16"
         >
           <span className="text-indigo-400 font-semibold text-sm tracking-widest uppercase">
-            About Me
+            {t("sectionLabel")}
           </span>
           <h2 className="mt-2 text-4xl sm:text-5xl font-black text-white">
-            Who I <span className="gradient-text">Am</span>
+            {t("title")} <span className="gradient-text">{t("titleHighlight")}</span>
           </h2>
           <div className="mt-4 w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
         </motion.div>
@@ -79,34 +58,13 @@ export default function About() {
           >
             <div className="glass-card rounded-2xl p-8 space-y-5">
               <p className="text-slate-300 text-lg leading-relaxed">
-                Hey there! I&apos;m{" "}
-                <span className="text-white font-semibold">Eslam Awod</span> —
-                a Full-Stack Developer with{" "}
-                <span className="text-indigo-400 font-semibold">2+ years</span>{" "}
-                building production-ready web applications and AI-powered
-                systems. I&apos;ve shipped{" "}
-                <span className="text-purple-400 font-semibold">
-                  6+ real projects
-                </span>{" "}
-                from scratch, ranging from restaurant POS systems to
-                algorithmic crypto trading bots.
+                {t("bio1")}
               </p>
               <p className="text-slate-400 leading-relaxed">
-                My stack covers the full spectrum: pixel-perfect UIs with{" "}
-                <span className="text-indigo-400">React 19</span> and{" "}
-                <span className="text-indigo-400">Next.js</span>, robust REST
-                APIs with{" "}
-                <span className="text-purple-400">Laravel &amp; Sanctum</span>,
-                and real-time backend services with{" "}
-                <span className="text-purple-400">Node.js</span>. I&apos;ve
-                handled Clover POS integrations, QR-based ordering systems,
-                multi-role RBAC platforms, and AI/ML trading algorithms.
+                {t("bio2")}
               </p>
               <p className="text-slate-400 leading-relaxed">
-                I thrive on turning complex technical challenges into clean,
-                maintainable solutions. Whether it&apos;s a startup MVP or a
-                scaling production system — I bring both technical depth and
-                product thinking to every project.
+                {t("bio3")}
               </p>
             </div>
 
@@ -114,10 +72,10 @@ export default function About() {
             <div className="glass-card rounded-2xl p-6">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: "6+", label: "Projects Shipped", color: "border-indigo-500/40" },
-                  { value: "2+", label: "Years Experience", color: "border-purple-500/40" },
-                  { value: "4", label: "Tech Stacks Mastered", color: "border-cyan-500/40" },
-                  { value: "∞", label: "Problems Solved", color: "border-emerald-500/40" },
+                  { value: "6+", label: t("stats.projects"), color: "border-indigo-500/40" },
+                  { value: "2+", label: t("stats.years"), color: "border-purple-500/40" },
+                  { value: "4", label: t("stats.stacks"), color: "border-cyan-500/40" },
+                  { value: "∞", label: t("stats.problems"), color: "border-emerald-500/40" },
                 ].map((stat) => (
                   <div
                     key={stat.label}
@@ -133,7 +91,8 @@ export default function About() {
 
           {/* Right — highlights */}
           <div className="space-y-4">
-            {highlights.map((item, i) => {
+            {highlights.map((text, i) => {
+              const item = highlightIcons[i];
               const Icon = item.icon;
               return (
                 <motion.div
@@ -150,7 +109,7 @@ export default function About() {
                     <Icon className={`w-5 h-5 ${item.color}`} />
                   </div>
                   <p className="text-slate-300 text-sm leading-relaxed">
-                    {item.text}
+                    {text}
                   </p>
                 </motion.div>
               );
