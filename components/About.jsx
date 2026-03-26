@@ -7,10 +7,30 @@ import { Telescope, Briefcase, Bot, Globe } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 const highlightIcons = [
-  { icon: Telescope, color: "text-indigo-400", bg: "bg-indigo-500/10", border: "border-indigo-500/20" },
-  { icon: Briefcase, color: "text-purple-400", bg: "bg-purple-500/10", border: "border-purple-500/20" },
-  { icon: Bot, color: "text-cyan-400", bg: "bg-cyan-500/10", border: "border-cyan-500/20" },
-  { icon: Globe, color: "text-emerald-400", bg: "bg-emerald-500/10", border: "border-emerald-500/20" },
+  {
+    icon: Telescope,
+    color: "text-indigo-400",
+    bg: "bg-indigo-500/10",
+    border: "border-indigo-500/20",
+  },
+  {
+    icon: Briefcase,
+    color: "text-purple-400",
+    bg: "bg-purple-500/10",
+    border: "border-purple-500/20",
+  },
+  {
+    icon: Bot,
+    color: "text-cyan-400",
+    bg: "bg-cyan-500/10",
+    border: "border-cyan-500/20",
+  },
+  {
+    icon: Globe,
+    color: "text-emerald-400",
+    bg: "bg-emerald-500/10",
+    border: "border-emerald-500/20",
+  },
 ];
 
 const fadeUp = {
@@ -42,7 +62,8 @@ export default function About() {
             {t("sectionLabel")}
           </span>
           <h2 className="mt-2 text-4xl sm:text-5xl font-black text-white">
-            {t("title")} <span className="gradient-text">{t("titleHighlight")}</span>
+            {t("title")}{" "}
+            <span className="gradient-text">{t("titleHighlight")}</span>
           </h2>
           <div className="mt-4 w-16 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full" />
         </motion.div>
@@ -60,28 +81,42 @@ export default function About() {
               <p className="text-slate-300 text-lg leading-relaxed">
                 {t("bio1")}
               </p>
-              <p className="text-slate-400 leading-relaxed">
-                {t("bio2")}
-              </p>
-              <p className="text-slate-400 leading-relaxed">
-                {t("bio3")}
-              </p>
+              <p className="text-slate-400 leading-relaxed">{t("bio2")}</p>
+              <p className="text-slate-400 leading-relaxed">{t("bio3")}</p>
             </div>
 
             {/* Experience Stats */}
             <div className="glass-card rounded-2xl p-6">
               <div className="grid grid-cols-2 gap-4">
                 {[
-                  { value: "6+", label: t("stats.projects"), color: "border-indigo-500/40" },
-                  { value: "2+", label: t("stats.years"), color: "border-purple-500/40" },
-                  { value: "4", label: t("stats.stacks"), color: "border-cyan-500/40" },
-                  { value: "∞", label: t("stats.problems"), color: "border-emerald-500/40" },
+                  {
+                    value: "6+",
+                    label: t("stats.projects"),
+                    color: "border-indigo-500/40",
+                  },
+                  {
+                    value: "2+",
+                    label: t("stats.years"),
+                    color: "border-purple-500/40",
+                  },
+                  {
+                    value: "4",
+                    label: t("stats.stacks"),
+                    color: "border-cyan-500/40",
+                  },
+                  {
+                    value: "∞",
+                    label: t("stats.problems"),
+                    color: "border-emerald-500/40",
+                  },
                 ].map((stat) => (
                   <div
                     key={stat.label}
                     className={`rounded-xl border ${stat.color} bg-white/5 p-4 text-center`}
                   >
-                    <p className="text-3xl font-black text-white">{stat.value}</p>
+                    <p className="text-3xl font-black text-white">
+                      {stat.value}
+                    </p>
                     <p className="mt-1 text-xs text-slate-400">{stat.label}</p>
                   </div>
                 ))}
