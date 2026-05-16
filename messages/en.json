@@ -9,11 +9,17 @@
   "hero": {
     "badge": "Open to opportunities",
     "greeting": "Hi, I'm",
-    "subtitle": "Full-Stack Developer with 2+ years shipping production apps — from AI trading bots to restaurant POS systems. I specialize in React, Next.js & Laravel.",
+    "subtitle": "Full-Stack Developer with 4+ years shipping production apps — from AI trading bots to restaurant POS systems. I specialize in React, Next.js & Laravel.",
     "viewProjects": "View Projects",
     "contactMe": "Contact Me",
     "downloadCv": "Download CV",
-    "typingWords": ["Full-Stack Developer", "AI Enthusiast", "React & Next.js Expert", "Laravel Developer", "Problem Solver"]
+    "typingWords": [
+      "Full-Stack Developer",
+      "AI Enthusiast",
+      "React & Next.js Expert",
+      "Laravel Developer",
+      "Problem Solver"
+    ]
   },
   "about": {
     "sectionLabel": "About Me",

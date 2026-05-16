@@ -9,11 +9,17 @@
   "hero": {
     "badge": "Abierto a oportunidades",
     "greeting": "Hola, soy",
-    "subtitle": "Desarrollador Full-Stack con 2+ años enviando aplicaciones a producción — desde bots de trading con IA hasta sistemas POS para restaurantes. Especializado en React, Next.js y Laravel.",
+    "subtitle": "Desarrollador Full-Stack con 4+ años enviando aplicaciones a producción — desde bots de trading con IA hasta sistemas POS para restaurantes. Especializado en React, Next.js y Laravel.",
     "viewProjects": "Ver proyectos",
     "contactMe": "Contáctame",
     "downloadCv": "Descargar CV",
-    "typingWords": ["Desarrollador Full-Stack", "Entusiasta de IA", "Experto en React & Next.js", "Desarrollador Laravel", "Resolvedor de problemas"]
+    "typingWords": [
+      "Desarrollador Full-Stack",
+      "Entusiasta de IA",
+      "Experto en React & Next.js",
+      "Desarrollador Laravel",
+      "Resolvedor de problemas"
+    ]
   },
   "about": {
     "sectionLabel": "Sobre mí",

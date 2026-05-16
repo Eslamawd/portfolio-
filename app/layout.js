@@ -4,7 +4,7 @@ export const metadata = {
   title: "Eslam Awod — Full-Stack Developer",
   description:
     "Portfolio of Eslam Awod, a Full-Stack Developer specializing in React, Next.js, Laravel, Node.js, and AI/ML.",
-  metadataBase: new URL("https://eslamawd.vercel.app"),
+  metadataBase: new URL("https://eslamawd.qregy.com"),
   keywords: [
     "Eslam Awod",
     "Full-Stack Developer",

@@ -9,11 +9,17 @@
   "hero": {
     "badge": "متاح للفرص الوظيفية",
     "greeting": "مرحباً، أنا",
-    "subtitle": "مطوّر Full-Stack بخبرة تتجاوز سنتين في بناء تطبيقات حقيقية — من بوتات تداول بالذكاء الاصطناعي إلى أنظمة POS للمطاعم. متخصص في React وNext.js وLaravel.",
+    "subtitle": "مطوّر Full-Stack بخبرة تتجاوز 4 سنين في بناء تطبيقات حقيقية — من بوتات تداول بالذكاء الاصطناعي إلى أنظمة POS للمطاعم. متخصص في React وNext.js وLaravel.",
     "viewProjects": "عرض المشاريع",
     "contactMe": "تواصل معي",
     "downloadCv": "تحميل السيرة الذاتية",
-    "typingWords": ["مطوّر Full-Stack", "عاشق الذكاء الاصطناعي", "خبير React و Next.js", "مطوّر Laravel", "محلّل مشاكل"]
+    "typingWords": [
+      "مطوّر Full-Stack",
+      "عاشق الذكاء الاصطناعي",
+      "خبير React و Next.js",
+      "مطوّر Laravel",
+      "محلّل مشاكل"
+    ]
   },
   "about": {
     "sectionLabel": "من أنا",
