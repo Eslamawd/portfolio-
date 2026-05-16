@@ -25,7 +25,7 @@
     "sectionLabel": "Sobre mí",
     "title": "Quién",
     "titleHighlight": "soy",
-    "bio1": "¡Hola! Soy Eslam Awod — Desarrollador Full-Stack con 2+ años construyendo aplicaciones web listas para producción y sistemas con IA. He entregado 6+ proyectos reales desde cero.",
+    "bio1": "¡Hola! Soy Eslam Awod — Desarrollador Full-Stack con 4+ años construyendo aplicaciones web listas para producción y sistemas con IA. He entregado 6+ proyectos reales desde cero.",
     "bio2": "Mi stack cubre todo el espectro: interfaces perfectas con React 19 y Next.js, APIs REST robustas con Laravel y Sanctum, y servicios backend en tiempo real con Node.js.",
     "bio3": "Me destaco convirtiendo desafíos técnicos complejos en soluciones limpias y mantenibles. Ya sea un MVP de startup o un sistema de producción escalable.",
     "highlights": [
@@ -45,7 +45,7 @@
     "sectionLabel": "Stack técnico",
     "title": "Habilidades &",
     "titleHighlight": "Herramientas",
-    "tagline": "2+ años de experiencia práctica en producción — desde APIs de Laravel y frontends de Next.js hasta bases de datos MySQL y sistemas de IA/ML.",
+    "tagline": "4+ años de experiencia práctica en producción — desde APIs de Laravel y frontends de Next.js hasta bases de datos MySQL y sistemas de IA/ML.",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
