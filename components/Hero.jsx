@@ -169,13 +169,6 @@ export default function Hero() {
           >
             {t("contactMe")}
           </button>
-          <a
-            href="/cv.pdf"
-            download
-            className="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-xl border border-white/10 text-white font-semibold text-lg hover:bg-white/5 hover:border-purple-500/50 hover:scale-105 transition-all duration-200"
-          >
-            {t("downloadCv")}
-          </a>
         </motion.div>
 
         {/* GitHub link */}
