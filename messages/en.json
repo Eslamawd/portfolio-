@@ -25,7 +25,7 @@
     "sectionLabel": "About Me",
     "title": "Who I",
     "titleHighlight": "Am",
-    "bio1": "Hey there! I'm Eslam Awod — a Full-Stack Developer with 2+ years building production-ready web applications and AI-powered systems. I've shipped 6+ real projects from scratch, ranging from restaurant POS systems to algorithmic crypto trading bots.",
+    "bio1": "Hey there! I'm Eslam Awod — a Full-Stack Developer with 4+ years building production-ready web applications and AI-powered systems. I've shipped 6+ real projects from scratch, ranging from restaurant POS systems to algorithmic crypto trading bots.",
     "bio2": "My stack covers the full spectrum: pixel-perfect UIs with React 19 and Next.js, robust REST APIs with Laravel & Sanctum, and real-time backend services with Node.js. I've handled Clover POS integrations, QR-based ordering systems, multi-role RBAC platforms, and AI/ML trading algorithms.",
     "bio3": "I thrive on turning complex technical challenges into clean, maintainable solutions. Whether it's a startup MVP or a scaling production system — I bring both technical depth and product thinking to every project.",
     "highlights": [
@@ -45,7 +45,7 @@
     "sectionLabel": "Tech Stack",
     "title": "Skills &",
     "titleHighlight": "Tools",
-    "tagline": "2+ years of hands-on production experience across the full stack — from Laravel APIs and Next.js frontends to MySQL databases and AI/ML systems.",
+    "tagline": "4+ years of hands-on production experience across the full stack — from Laravel APIs and Next.js frontends to MySQL databases and AI/ML systems.",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",

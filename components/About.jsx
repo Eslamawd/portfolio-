@@ -95,7 +95,7 @@ export default function About() {
                     color: "border-indigo-500/40",
                   },
                   {
-                    value: "2+",
+                    value: "4+",
                     label: t("stats.years"),
                     color: "border-purple-500/40",
                   },
